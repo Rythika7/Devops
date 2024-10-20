@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+background-color: #E8DFCA;
+padding-top: 50px;
+}
+body font {
+font-family: Haettenschweiler;
+font-size: 60px;
+color: #1A4D2E;
+}
+input {
+border-radius: 5px;
+box-shadow: 0 2px 4px grey;
+padding-bottom: 5px;
+margin-bottom: 20px;
+margin-right: 40px;
+padding-top: 15px;
+width: 350px;
+height: 20px;
+font-size: 20px;
+}
+#btn {
+font-size: 16px;
+border: 1px solid white;
+background-color: #1A4D2E;
+color: white;
+padding: 10px 30px;
+border-radius: 5px;
+font-size: 20px;
+margin-right: 50px;
+}
+#btn:hover {
+background-color: #4F6F52;
+}
+</style>
+</head>
+
+<body>
+<script>
+function validatePassword() {
+var password = document.getElementById("password").value;
+var confirmPassword =
+document.getElementById("confirmpassword").value;
+if (password.length < 8) {
+alert("Please enter a valid password that is at least 8 characters");
+return false;
+}
+if (password != confirmPassword) {
+alert("Passwords do not match");
+return false;
+}
+return true;
+}
+</script>
+<center>
+<table>
+<form action="Login.html" method="post" target="rightframe"
+onsubmit="return validatePassword()">
+<tr>
+<td><font>REGISTRATION DETAILS</font></td>
+</tr>
+<tr>
+<td>
+<input type="text" placeholder="First Name" required>
+<input type="text" placeholder="Last Name" required>
+</td>
+</tr>
+<tr>
+<td>
+<input type="email" placeholder="Email" required>
+<input type="number" placeholder="Mobile Number" required>
+</td>
+</tr>
+<tr>
+<td>
+<center>
+<input type="text" placeholder="Username" required>
+</center>
+</td>
+</tr>
+<tr>
+
+<td>
+<input type="password" id="password" placeholder="Enter
+Password" required>
+
+<input type="password" id="confirmpassword" placeholder="Re-
+enter Password" required>
+
+</td>
+</tr>
+<tr>
+<td align="center">
+<button type="submit" id="btn">Sign Up</button>
+<button type="reset" id="btn">Reset</button>
+</td>
+</tr>
+</form>
+</table>
+</center>
+</body>
+</html>
